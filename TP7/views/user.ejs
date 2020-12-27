@@ -1,0 +1,16 @@
+<html>
+    <body>
+        <%- include('header.ejs',{users:users})%>
+        <ul>
+            
+            <%users.forEach(user=>{%>  
+                <%if(user.age>30) {%>
+               
+                    <li><%=user.name%></li> 
+                <%}%>                    
+              
+                <%})%>
+        </ul>
+        
+    </body>
+</html>
