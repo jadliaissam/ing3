@@ -4,33 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="/bootstrap.css">
 </head>
 <body>
-    <h1>Liste des produits</h1>
-    <table>
+    <h1 >Liste des produits</h1>
+    <table class="table table-inverse">
         <thead>
             <th>id</th>
             <th>title</th>
             <th>prix</th>
+            <th></th>
+            <th></th>
+            <th></th>
         </thead>
         <tbody>
+
             <%for(var i=0;i<products.length;i++){%>
                 <tr>
                     <td><%=products[i].id%></td>
                     <td><%=products[i].title %></td>
                     <td><%=products[i].prix%></td>
-                    <td><a href="/products/<%=products[i].id%>">
+                    <td><a class="btn btn-info" href="/products/<%=products[i].id%>">
                         afficher detail
                     </a></td>
-                    <td><a href="/products/<%=products[i].id%>/delete">
+                    <td><a class="btn btn-danger" href="/products/<%=products[i].id%>/delete">
                         supprimer produit
                     </a></td>
-                    <td><a href="/products/<%=products[i].id%>/edit">
+                    <td><a class="btn btn-secondary" href="/products/<%=products[i].id%>/edit">
                         editer produit
                     </a></td>
                 </tr>
             <% } %>
+
         </tbody>
     </table>
+    <script src="/bootstrap.js"></script>
 </body>
 </html>

@@ -6,7 +6,7 @@ html(lang="en")
         title Document
     body
         h1 nouveau produit 
-        form(action="/products",method="post")
+        form(action="/products",method="post",enctype="multipart/form-data")
             div
                 label id produit 
                 input(type="number", name="id")
@@ -16,4 +16,7 @@ html(lang="en")
             div    
                 label prix produit 
                 input(type="number", name="prix")
+            div    
+                label image produit 
+                input(type="file", name="image")
             input(type="submit", text="ajouter")
